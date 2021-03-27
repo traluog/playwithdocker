@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+
+  dremio:
+    image: dremio/dremio-oss:latest
+    restart: always
+    ports:
+      - 9047:9047
+      - 31010:31010
+      - 32010:32010
+      - 45678:45678
+    volumes:
+      - /opt/dremio/data:/opt/dremio/data
